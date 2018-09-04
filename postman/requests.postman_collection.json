@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "3fc8ffbb-befc-40c1-8301-d6105e31d456",
+		"name": "requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "search users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://api.github.com/search/users?q=jack+followers:>1000",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"search",
+						"users"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "jack+followers:>1000"
+						}
+					]
+				},
+				"description": "search user with followers more than 1000"
+			},
+			"response": []
+		},
+		{
+			"name": "request define repository",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " token eed48ffa3f2d028b7ace9ac0ea80a2b475461c7f"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://api.github.com/repos/rustamkarimov1/http",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"repos",
+						"rustamkarimov1",
+						"http"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Javascript topic request",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " token eed48ffa3f2d028b7ace9ac0ea80a2b475461c7f"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.github.v3.text-match+json, application/vnd.github.mercy-preview"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://api.github.com/search/code?q=addClass+in:file+language:python",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"search",
+						"code"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "addClass+in:file+language:python"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "javascript with key word addClass",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " token eed48ffa3f2d028b7ace9ac0ea80a2b475461c7f"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.github.v3.text-match+json, application/vnd.github.mercy-preview"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://api.github.com/search/code?q=addClass+in:file+language:js+repo:jquery/jquery",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"search",
+						"code"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "addClass+in:file+language:js+repo:jquery/jquery"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creating comment ",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " token eed48ffa3f2d028b7ace9ac0ea80a2b475461c7f"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.github.v3.text-match+json, application/vnd.github.mercy-preview",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"body\": \"hi problem!\"\r\n}"
+				},
+				"url": {
+					"raw": "https://api.github.com/repos/RustamKarimov1/http/issues/2/comments",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"repos",
+						"RustamKarimov1",
+						"http",
+						"issues",
+						"2",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creating of  issue",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " token eed48ffa3f2d028b7ace9ac0ea80a2b475461c7f"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.github.v3.text-match+json, application/vnd.github.mercy-preview"
+					},
+					{
+						"key": "Content-Type",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"issue\",\r\n  \"body\": \"I'm having a problem with this.\",\r\n  \"assignees\": [\r\n    \"RustamKarimov1\"\r\n  ],\r\n  \"labels\": [\r\n    \"bug\"\r\n  ]\r\n}"
+				},
+				"url": {
+					"raw": "https://api.github.com/repos/RustamKarimov1/http/issues",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"repos",
+						"RustamKarimov1",
+						"http",
+						"issues"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
